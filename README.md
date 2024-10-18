@@ -1,7 +1,5 @@
-# Custom Theme
-
-# Hotel Association of Canada
-Custom WordPress Theme for build for this site (https://hotelassociation.ca/).
+# Custom Theme for Hotel Association of Canada Site
+Custom WordPress Theme build for this site (https://hotelassociation.ca/).
 
 ## Table of Contents
 1. [Setup](#setup)
