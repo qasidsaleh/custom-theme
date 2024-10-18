@@ -1,0 +1,43 @@
+/*!
+Theme Name: Operatic
+Theme URI: https://operaticagency.com/
+Author: Operatic
+Author URI: https://operaticagency.com/
+Text Domain: Operatic
+Version: 0.1
+License: GPL-2.0+
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what
+you've learned with others.
+
+*/
+
+@import "utilities/normalize";
+@import "utilities/colours";
+@import "layout";
+@import "utilities/typography";
+@import "utilities/buttons";
+
+@import "header";
+@import "footer";
+
+@import "../includes/components/hero/hero";
+@import "../includes/components/grid-content/grid-content";
+@import "../includes/components/statistics/statistics";
+@import "../includes/components/partners/partners";
+@import "../includes/components/grid-blocks/grid-blocks";
+@import "../includes/components/news/news";
+@import "../includes/components/post-listing/post-listing";
+@import "../includes/components/icons-grid/icons-grid";
+@import "../includes/components/resources/resources";
+@import "../includes/components/embeded-iframe/embeded-iframe";
+@import "../includes/components/contact/contact";
+@import "../includes/components/google-map/google-map";
+@import "../includes/components/team-members/team-members";
+@import "../includes/components/simple-content/simple-content";
+@import "../includes/components/logos/logos";
+@import "../includes/components/gallery-slider/gallery-slider";
+@import "../includes/components/sitemap/sitemap";
+@import "../includes/components/form/form";

@@ -1,0 +1,24 @@
+.logos{
+    margin-bottom: 80px;
+    .logos-container{
+        h2 {
+            margin-bottom: .7em;
+        }
+        .logos-grid{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            gap: 30px;
+            @media only screen and (max-width: $small_screen_breakpoint){
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+            @media only screen and (max-width:$mobile_breakpoint){
+                grid-template-columns: 1fr 1fr;
+            }
+            .logo-item{
+                img{
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+}

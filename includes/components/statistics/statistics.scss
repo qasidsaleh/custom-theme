@@ -1,0 +1,104 @@
+.statistics{
+    margin-bottom: 80px;
+    position: relative;
+    @media only screen and (max-width:$mobile_breakpoint){
+        margin-bottom: 40px;
+    }
+    &:after{
+        position: absolute;
+        content: '';
+        bottom: -80px;
+        left: 0;
+        right: 0;
+        background-image: url('./img/bg.png');
+        width: 100%;
+        height: 874px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        z-index: -10;
+    }
+    .data-container-3{
+        display: grid;
+        place-items: center;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 140px;
+        @media only screen and (max-width:$desktop_breakout){
+            grid-template-columns: repeat(1, 1fr);
+            gap: 20px;
+        }
+    }
+     .data-container-2{
+        display: grid;
+        place-items: center;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 80px;
+        @media only screen and (max-width:$desktop_breakout){
+            grid-template-columns: repeat(1, 1fr);
+            gap: 20px;
+        }
+    }
+    .data-container-1{
+        display: grid;
+        place-items: center;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 80px;
+        @media only screen and (max-width:$desktop_breakout){
+            gap: 20px;
+        }
+    }
+    .data-item{
+        position: relative;
+        &:after{
+            position: absolute;
+            content: '';
+            width: 1px;
+            height: 90px;
+            background-color: #BD1A2C;;
+            right: -135px;
+            top: 50%;
+            transform:translateY(-50%);
+            @media only screen and (max-width:$desktop_breakout){
+                display: none;
+            }
+        }
+        &:last-child{
+            &:after{
+                display: none;
+            }
+        }
+       .data-value{
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 75px;
+            line-height: 75px;
+            font-weight: 700;
+            white-space: nowrap;
+            text-align: center;
+            @media only screen and (max-width:$desktop_breakout){
+                font-size: 70px;
+                line-height: 75px;
+            }
+            @media only screen and (max-width:$mobile_breakpoint){
+                font-size: 60px;
+                line-height: 70px;
+            }
+            .data-value-num{
+                display: flex;
+                color: $red;
+            }
+        }
+        .data-title{
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 26px;
+            color: $black;
+            text-align: center;
+            width: 220px;
+            margin: 0 auto;
+            padding-top: 80px;
+        }
+    }
+}

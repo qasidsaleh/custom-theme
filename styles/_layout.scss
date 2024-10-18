@@ -1,0 +1,244 @@
+$max_width: 1320px;
+
+$small_screen_breakpoint: 1199px;
+$desktop_breakout: 1299px;
+$tablet_breakpoint: 991px;
+$mobile_breakpoint: 767px;
+
+$padding_desktop: 0 60px;
+$padding_mobile: 0 20px;
+
+:root {
+	scroll-behavior: smooth;
+	scroll-padding-top: 105px;
+}
+.mt-0{
+	margin-top: 0px !important;
+}
+.mt-3{
+	margin-top: 30px !important;
+}
+
+body {
+	overflow-x: hidden;
+	width: 100%;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	z-index: 0;
+	&.overlay{
+		overflow: hidden;
+		&:before{
+			position: absolute;
+			content: '';
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			background: rgba(71, 75, 82, 0.90);
+			z-index: 999;
+		}
+	}
+}
+
+#main-content{
+	position: relative;
+	overflow:hidden;
+	margin-top: 183px;
+	@media only screen and (max-width:$mobile_breakpoint){
+		margin-top: 167px;
+	}
+}
+
+/* images */
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+.section-inner{
+	max-width: $max_width;
+	margin: 0 auto;
+	padding: $padding_desktop;
+	@media only screen and (max-width:$small_screen_breakpoint){
+		padding: $padding_mobile;
+	}
+}
+
+// bg overlap fix
+section {
+	position: relative;
+	z-index: 1;
+
+	&.enable-bg,
+	&.statistics,
+	&.simple-content {
+		z-index: 0;
+	}
+}
+
+// add class to element to animate up on scroll (needs js)
+.reveal-bottom{
+	opacity: 0;
+	transition: 1s;
+	transform: translateY(200px);
+	&.active{
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+.nav-shortcuts {
+	a {
+		display: inline-block;
+		position: absolute;
+		top: 0;
+		left: 50%;
+		z-index: 100000;
+		padding: 10px 20px;
+		font-weight: bold;
+		color: #000;
+		background-color: #fff;
+		box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.15);
+		transform: translate3d(-50%, -200%, 0);
+
+		&:focus {
+			transform: translate3d(-50%, 0, 0);
+		}
+	}
+}
+.error404{
+	main{
+		height: calc(100vh - 375px);
+		.hero{
+		    position: absolute;
+		    left: 0;
+		    right: 0;
+		    top: 40%;
+		    transform: translateY(-50%);
+		    a{
+		    	font-size: 18px;
+			    font-weight: 600;
+			    line-height: 28px;
+			    color: #D80404;
+			    text-decoration: none;
+			    position: relative;
+			    &:after{
+			        position: absolute;
+				    content: '';
+				    bottom: 0;
+				    left: 0;
+				    right: 0;
+				    width: 100%;
+				    height: 1px;
+				    background-color: #D80404;
+			    }
+		    }
+		}
+	}
+}
+@media only screen and (min-width:$tablet_breakpoint){
+	.single-post,
+	.single-resources{
+		.grid-container{
+			width: 80%;
+			margin: 0 auto;
+		}
+	}
+}
+
+@mixin concave-edge {
+	mask-image: radial-gradient(100% 700px at bottom,transparent 0%, transparent 30%, black 30.2%);
+	mask-size: 300% 200%;
+	mask-position: 50% calc(170px - 100%);
+}
+
+.form {
+	.screen-reader-response {
+		position: absolute;
+		height: 0;
+		overflow: hidden;
+	}
+
+	form {
+		display: grid;
+		grid-gap: 1rem;
+
+		.row {
+			display: grid;
+			grid-gap: 1rem;
+			grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		}
+
+		label{
+			font-size: 16px;
+			font-weight: 400;
+			line-height: 24px;
+			color: $black;
+			display: block;
+		}
+
+		.wpcf7-form-control-wrap{
+			display: block;
+		}
+
+		input[type="text"],
+		input[type="phone"],
+		input[type="email"],
+		input[type="password"],
+		select {
+			width: 100%;
+			height: 50px;
+			padding: 0 10px;
+			box-sizing: border-box;
+			background-color: #F5F1F2;
+			border: none;
+			border-bottom: solid 2px $black;
+			outline: none;
+
+			@media only screen and (max-width:$small_screen_breakpoint){
+				padding: 0;
+			}
+
+			&.wpcf7-not-valid{
+				border-color: red;
+			}
+		}
+
+		textarea {
+			width: 100%;
+			height: 150px;
+			padding: 10px;
+			box-sizing: border-box;
+			background-color: #F5F1F2;
+			border: none;
+			border-bottom: solid 2px $black;
+			outline: none;
+
+			@media only screen and (max-width:$small_screen_breakpoint){
+				padding: 10px 0;
+			}
+		}
+
+		.wpcf7-checkbox,
+		.wpcf7-radio {
+			display: grid;
+			grid-gap: .5rem;
+
+			input {
+				margin-right: 1ch;
+			}
+		}
+
+		.options {
+			display: grid;
+			grid-gap: .5rem;
+		}
+
+		.wpcf7-response-output,
+		.wpcf7-not-valid-tip {
+			margin: 0;
+			color: red;
+		}
+	}
+}

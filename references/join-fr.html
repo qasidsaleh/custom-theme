@@ -1,0 +1,155 @@
+<div class="row">
+	<div class="field">
+		<label for="country">Pays :</label>
+		[text* country]
+	</div>
+
+	<div class="field">
+		<label for="membership">Type de Membre :</label>
+		[select* membership include_blank "Éducateur" "Influenceur" "Étudiant"]
+	</div>
+
+	<div class="field">
+		<label for="fee">Frais Annuels :</label>
+		[text fee readonly "$0.00 CAD"]
+	</div>
+</div>
+
+<div class="row">
+	<div class="field">
+		<label for="company_name">Nom d'Entreprise :</label>
+		[text* company_name]
+	</div>
+
+	<div class="field">
+		<label for="address">Adresse :</label>
+		[text* address]
+	</div>
+</div>
+
+<div class="row">
+	<div class="field">
+		<label for="city">Ville :</label>
+		[text* city]
+	</div>
+
+	<div class="field">
+		<label for="province">Code Postal :</label>
+		[text* province]
+	</div>
+
+	<div class="field">
+		<label for="postal_code">Postal Code :</label>
+		[text* postal_code]
+	</div>
+
+	<div class="field">
+		<label for="company_phone">Numéro de Téléphone d'Entreprise :</label>
+		[text* company_phone]
+	</div>
+</div>
+
+<div class="row">
+	<div class="field">
+		<label for="website">Site Web :</label>
+		[text* website]
+	</div>
+
+	<div class="field">
+		<label for="billing_email">Courriel de Facturation :</label>
+		[text billing_email placeholder "Optional"]
+	</div>
+</div>
+
+<div class="row">
+	<div class="field">
+		<label for="twitter_primary">Identificateur Twitter Principal :</label>
+		[text twitter_primary placeholder "Optional"]
+	</div>
+
+	<div class="field">
+		<label for="twitter_secondary">Identificateur Twitter Secondaire :</label>
+		[text twitter_secondary placeholder "Optional"]
+	</div>
+</div>
+
+<div class="row">
+	<div class="field">
+		<label for="profile_english">Profil de l’Entreprise (Anglais) :</label>
+		[textarea profile_english placeholder "Optional"]
+	</div>
+
+	<div class="field">
+		<label for="profile_french">Profil de l’Entreprise (Français) :</label>
+		[textarea profile_french placeholder "Optional"]
+	</div>
+</div>
+
+<h3>Vos Coordonnées</h3>
+
+<div class="row">
+	<div class="field">
+		<label for="first_name">Prénom :</label>
+		[text* first_name]
+	</div>
+
+	<div class="field">
+		<label for="last_name">Nom de Famille :</label>
+		[text* last_name]
+	</div>
+</div>
+
+<div class="row">
+	<div class="field">
+		<label for="title">Titre :</label>
+		[text* title]
+	</div>
+
+	<div class="field">
+		<label for="email">Adresse Courriel :</label>
+		[text* email]
+	</div>
+</div>
+
+<div class="row">
+	<div class="field">
+		<label for="phone">Mon Numéro de Téléphone :</label>
+		[text phone placeholder "Optional"]
+	</div>
+
+	<div class="field">
+		<label for="username">Nom d'Utilisateur :</label>
+		[text* username]
+	</div>
+</div>
+
+<div class="row">
+	<div class="field">
+		<label for="password">Mot de Passe :</label>
+		[text* password]
+	</div>
+
+	<div class="field">
+		<label for="confirm_password">Confirmer le Mot de Passe :</label>
+		[text* confirm_password]
+	</div>
+</div>
+
+<div class="row">
+	<div class="column">
+		<h3>Listes d’Envoi</h3>
+		[checkbox mailing_lists "Communications d'AHC (Bulletin Électronique, Communiqués, Mises à Jour)" "Événements, Webinaires et Options de Réseautage" "Relations Gouvernementales (Information et Mises à Jour)"]
+	</div>
+
+	<div class="column">
+		<h3>Options de Paiement</h3>
+		<div class="options">
+			[radio payment_options default:1 "Payer Par Chèque" "Payer Par Carte De Crédit"]
+			[checkbox* terms_and_conditions "J’accepte les conditions d’adhésion à l’Association des hôtels du Canada."]
+		</div>
+	</div>
+</div>
+
+<div class="center">
+	[submit class:btn class:btn-primary "Soumettre"]
+</div>

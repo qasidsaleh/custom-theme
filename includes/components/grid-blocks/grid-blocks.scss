@@ -1,0 +1,177 @@
+.grid-blocks{
+    margin-bottom: 80px;
+    background: linear-gradient(230deg, #921F24 8.51%, #7F1016 53.77%, #6A0006 70.26%);
+    @include concave-edge;
+    padding: 80px 0 150px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    @media only screen and (max-width:$mobile_breakpoint){
+        padding: 40px 0 100px;
+        margin-bottom: 40px;
+    }
+    &:before{
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        right: 0;
+        background-image: url(./img/circle-bg.png);
+        background-repeat: no-repeat;
+        width: 1027px;
+        height: 763px;
+        background-size: contain;
+        margin: 0 auto;
+    }
+    // &:after{
+    //     position: absolute;
+    //     content: '';
+    //     bottom: -50px;
+    //     left: -5%;
+    //     right: -5%;
+    //     background-color: $white;
+    //     border-radius: 100%;
+    //     width: 110%;
+    //     height: 100px;
+    //     @media only screen and (max-width:$mobile_breakpoint){
+    //         width: 130%;
+    //         left: -15%;
+    //         right: -15%;
+    //     }
+    // }
+    .section-inner{
+        h2,p{
+            color: $white;
+        }
+        h2 {
+            margin-bottom: .7em;
+        }
+        .h3{
+            font-size: 40px;
+            line-height: 50px;
+            @media only screen and (max-width:$tablet_breakpoint){
+                font-size: 35px;
+                line-height: 45px;
+            }
+        }
+        .h4{
+            font-size: 25px;
+            line-height: 35px;
+            font-weight: 600;
+            color: $white;
+            max-width: 1050px;
+            margin: 0 auto 40px;
+            display: block;
+            @media only screen and (max-width:$tablet_breakpoint){
+                font-size: 22px;
+                line-height: 30px;
+            }
+        }
+        .intro{
+            max-width: 750px;
+            margin: 0 auto 0;
+            &.full-width{
+                max-width: 100%;
+            }
+        }
+        .block-container{
+            display: grid;
+            gap: 40px 80px;
+            @media only screen and (max-width:$small_screen_breakpoint){
+                gap:40px 60px;
+            }
+            .block{
+                text-align: left;
+                position: relative;
+                &.bottom-spacing{
+                    padding-bottom: 80px;
+                }
+                img{
+                    margin: 0 auto 20px;
+                    min-height: 141px;
+                }
+                h3{
+                    font-size: 25px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 30px;
+                    color: $light;
+                    text-transform: capitalize;
+                }
+                p{
+                    text-align: left;
+                    margin-bottom: 0px;
+                }
+                a{
+                    position: absolute;
+                    bottom: 0;
+                    margin: 0 auto;
+                    left: 0;
+                }
+            }
+            &.center{
+                .block{
+                    a{
+                        left: 0;
+                        right: 0;
+                        width: max-content;
+                    }
+                }
+            }
+            &.col-3{
+                grid-template-columns: 1fr 1fr 1fr;
+                @media only screen and (max-width:$tablet_breakpoint){
+                    grid-template-columns: 1fr;
+                }
+            }
+            &.col-2{
+                max-width: 1080px;
+                margin: 0 auto;
+                grid-template-columns: 1fr 1fr;
+                gap:60px 80px;
+                @media only screen and (max-width:$tablet_breakpoint){
+                    grid-template-columns: 1fr;
+                    gap:40px 80px;
+                }
+                .block{
+                    h3{
+                        font-size: 32px;
+                        line-height: 38px;
+                        @media only screen and (max-width:$mobile_breakpoint){
+                            font-size: 25px;
+                            line-height: 28px;
+                        }
+                    }
+                    .h4{
+                        font-size: 25px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: 30px;
+                        color: $light;
+                        text-transform: capitalize;
+                    }
+                    p{
+                        max-width: 460px;
+                    }
+                }
+            }
+            &.center{
+                h3,p{
+                    text-align: center;
+                }
+            }
+            &.left{
+                img{
+                    width: 100%;
+                    height: auto;
+                    margin-left: 0;
+                    margin-right: 0;
+
+                }
+                h3{
+                    text-align: left;
+                }
+            }
+        }
+    }
+}

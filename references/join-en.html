@@ -1,0 +1,155 @@
+<div class="row">
+	<div class="field">
+		<label for="country">Country:</label>
+		[text* country]
+	</div>
+
+	<div class="field">
+		<label for="membership">Membership Type:</label>
+		[select* membership include_blank "Educator" "Influencer" "Student"]
+	</div>
+
+	<div class="field">
+		<label for="fee">Annual Fee:</label>
+		[text fee readonly "$0.00 CAD"]
+	</div>
+</div>
+
+<div class="row">
+	<div class="field">
+		<label for="company_name">Company Name:</label>
+		[text* company_name]
+	</div>
+
+	<div class="field">
+		<label for="address">Address:</label>
+		[text* address]
+	</div>
+</div>
+
+<div class="row">
+	<div class="field">
+		<label for="city">City:</label>
+		[text* city]
+	</div>
+
+	<div class="field">
+		<label for="province">Province:</label>
+		[text* province]
+	</div>
+
+	<div class="field">
+		<label for="postal_code">Postal Code:</label>
+		[text* postal_code]
+	</div>
+
+	<div class="field">
+		<label for="company_phone">Company Phone:</label>
+		[text* company_phone]
+	</div>
+</div>
+
+<div class="row">
+	<div class="field">
+		<label for="website">Website:</label>
+		[text* website]
+	</div>
+
+	<div class="field">
+		<label for="billing_email">Billing Email:</label>
+		[text billing_email placeholder "Optional"]
+	</div>
+</div>
+
+<div class="row">
+	<div class="field">
+		<label for="twitter_primary">Primary Twitter Handle:</label>
+		[text twitter_primary placeholder "Optional"]
+	</div>
+
+	<div class="field">
+		<label for="twitter_secondary">Secondary Twitter Handle:</label>
+		[text twitter_secondary placeholder "Optional"]
+	</div>
+</div>
+
+<div class="row">
+	<div class="field">
+		<label for="profile_english">Company Profile (English):</label>
+		[textarea profile_english placeholder "Optional"]
+	</div>
+
+	<div class="field">
+		<label for="profile_french">Company Profile (French):</label>
+		[textarea profile_french placeholder "Optional"]
+	</div>
+</div>
+
+<h3>Contact Info</h3>
+
+<div class="row">
+	<div class="field">
+		<label for="first_name">First Name:</label>
+		[text* first_name]
+	</div>
+
+	<div class="field">
+		<label for="last_name">Last Name:</label>
+		[text* last_name]
+	</div>
+</div>
+
+<div class="row">
+	<div class="field">
+		<label for="title">Title:</label>
+		[text* title]
+	</div>
+
+	<div class="field">
+		<label for="email">Email:</label>
+		[text* email]
+	</div>
+</div>
+
+<div class="row">
+	<div class="field">
+		<label for="phone">My Phone:</label>
+		[text phone placeholder "Optional"]
+	</div>
+
+	<div class="field">
+		<label for="username">Username:</label>
+		[text* username]
+	</div>
+</div>
+
+<div class="row">
+	<div class="field">
+		<label for="password">Password:</label>
+		[text* password]
+	</div>
+
+	<div class="field">
+		<label for="confirm_password">Confirm Password:</label>
+		[text* confirm_password]
+	</div>
+</div>
+
+<div class="row">
+	<div class="column">
+		<h3>Mailing Lists</h3>
+		[checkbox mailing_lists "HAC Communications (E-Newsletter, News Releases, Updates)" "Events, Webinars & Networking Options" "Government Relations Information and Updates"]
+	</div>
+
+	<div class="column">
+		<h3>Payment Options</h3>
+		<div class="options">
+			[radio payment_options default:1 "Pay By Cheque" "Pay By Credit Card"]
+			[checkbox* terms_and_conditions "I agree to the Hotel Association of Canada's Membership Terms & Conditions."]
+		</div>
+	</div>
+</div>
+
+<div class="center">
+	[submit class:btn class:btn-primary "Submit"]
+</div>

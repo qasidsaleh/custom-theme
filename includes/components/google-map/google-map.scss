@@ -1,0 +1,10 @@
+.google-map{
+    #map{
+        height: 100%;
+        width: 100%;
+        & > div{
+            height: 550px !important;
+            position: relative !important;
+        }
+    }
+}
