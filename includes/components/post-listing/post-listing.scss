@@ -52,25 +52,6 @@
                 .simple {
                     margin-top: auto;
                 }
-                // .link{
-                //     text-decoration: underline;
-                //     font-size: 16px;
-                //     font-style: normal;
-                //     font-weight: 600;
-                //     line-height: 26px;
-                //     text-transform: capitalize;
-                //     position: relative;
-                //     color: $black;
-                //     width: max-content;
-                //     display: flex;
-                //     align-items:center;
-                //     &:hover{
-                //         text-decoration: none;
-                //     }
-                //     span{
-                //         padding-left: 10px;
-                //     }
-                // }
                 &.item1{
                     @media only screen and (min-width:$tablet_breakpoint){
                         &:before{
@@ -80,7 +61,6 @@
                             bottom: 0;
                             left: 0;
                             right: 0;
-                            // background-color: rgba(0,0,0,0.1);
                             background: linear-gradient(184deg, transparent 50%, rgba(0,0,0,1) 100%);
                             z-index: 1;
                         }

@@ -33,13 +33,6 @@
             align-items: self-start;
         }
         .content{
-            // max-width: 520px;
-            // &.full{
-            //     max-width: 100%;
-            // }
-            // &.bg-enable{
-            //     max-width: 660px;
-            // }
             .sub-heading{
                 font-size: 12px;
                 font-style: normal;
@@ -94,7 +87,6 @@
                     height: 130%;
                     background: linear-gradient(205deg, #921F24 -10.4%, #BD1A2C 28.81%, #6A0006 111.03%);
                     z-index: -1;
-                    // opacity: 0;
                     transition: 2s;
                     @media only screen and (max-width:$small_screen_breakpoint){
                         width: 60%;

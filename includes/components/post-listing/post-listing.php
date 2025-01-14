@@ -21,8 +21,6 @@
 						'post__in' => $custom_select_6_posts,
 						'post_status' => 'publish',
 						'orderby' => 'post__in'
-						// 'order' => 'ASC',
-						// 'orderby' => 'menu_order'
 					);
 				} else {
 					$args = array(
@@ -165,7 +163,7 @@
 							'post_status' => 'publish',
 							'posts_per_page' => $property_per_page ? (int)$property_per_page : 1,
 							'paged' => $paged,
-							'offset' => $offset // Exclude the first 6 posts
+							'offset' => $offset
 						);
 					}
 				    $post = new WP_Query($args);

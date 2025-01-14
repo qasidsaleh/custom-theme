@@ -134,7 +134,6 @@ function get_ajax_post() {
         });
     </script>
     <?php echo $response;
-    //die();
     exit;
 }
 

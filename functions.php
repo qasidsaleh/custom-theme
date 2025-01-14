@@ -125,8 +125,6 @@ function html5blank_styles()
 {
 	wp_register_style('html5blank', get_template_directory_uri() . '/style.css', array(), '1.0', 'all');
 	wp_enqueue_style('html5blank');
-	// wp_register_style('esa4yrg', 'https://use.typekit.net/esa4yrg.css');
-	// wp_enqueue_style('esa4yrg');
 	wp_register_style('esa4ygr', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css');
 	wp_enqueue_style('esa4ygr');
 }
@@ -312,9 +310,6 @@ remove_filter('the_excerpt', 'wpautop'); // Remove <p> tags from Excerpt altoget
 add_shortcode('html5_shortcode_demo', 'html5_shortcode_demo'); // You can place [html5_shortcode_demo] in Pages, Posts now.
 add_shortcode('html5_shortcode_demo_2', 'html5_shortcode_demo_2'); // Place [html5_shortcode_demo_2] in Pages, Posts now.
 
-// Shortcodes above would be nested like this -
-// [html5_shortcode_demo] [html5_shortcode_demo_2] Here's the page title! [/html5_shortcode_demo_2] [/html5_shortcode_demo]
-
 // Disable archive pages
 add_action('template_redirect', 'operatic_disable_archives');
 function operatic_disable_archives(){
@@ -323,26 +318,6 @@ function operatic_disable_archives(){
 		$wp_query->set_404();
 	}
 }
-
-/*------------------------------------*\
-	Custom Options
-\*------------------------------------*/
-
-// if( function_exists('acf_add_options_page') ) {
-
-// 	acf_add_options_page(array(
-// 		'page_title' 	=> 'Theme Options',
-// 		'menu_title'	=> 'Theme Options',
-// 		'menu_slug' 	=> 'operatic-theme-options',
-// 		'capability'	=> 'edit_posts',
-// 		'redirect'		=> false
-// 	));
-
-// }
-
-/*------------------------------------*\
-	Custom Post Types
-\*------------------------------------*/
 
 /*------------------------------------*\
 	ShortCode Functions
@@ -382,43 +357,6 @@ function conditionally_load_plugin_js_css()
 		wp_dequeue_style('contact-form-7'); # Restrict css.
 	}
 }
-
-
-// /**************************************************
-//           removing default submit tag
-// **************************************************/
-// remove_action('wpcf7_init', 'wpcf7_add_form_tag_submit');
-// /**************************************************
-// adding action with function which handles our button markup
-// **************************************************/
-// add_action('wpcf7_init', 'twentysixteen_child_cf7_button');
-// /**************************************************
-//         adding out submit button tag
-// **************************************************/
-// if (!function_exists('twentysixteen_child_cf7_button')) {
-//   function twentysixteen_child_cf7_button() {
-//     wpcf7_add_form_tag('submit', 'twentysixteen_child_cf7_button_handler');
-//   }
-// }
-// /**************************************************
-//       out button markup inside handler
-// **************************************************/
-// if (!function_exists('twentysixteen_child_cf7_button_handler')) {
-//   function twentysixteen_child_cf7_button_handler($tag) {
-//     $tag = new WPCF7_FormTag($tag);
-//     $class = wpcf7_form_controls_class($tag->type);
-//     $atts = array();
-//     $atts['class'] = $tag->get_class_option($class);
-//     $atts['class'] .= ' twentysixteen-child-custom-btn';
-//     $atts['id'] = $tag->get_id_option();
-//     $atts['tabindex'] = $tag->get_option('tabindex', 'int', true);
-//     $value = isset($tag->values[0]) ? $tag->values[0] : '';
-//     $atts['type'] = 'Submit';
-//     $atts = wpcf7_format_atts($atts);
-//     $html = sprintf('<button class="wpcf7-form-control has-spinner wpcf7-submit btn btn-primary"><span>Submit</span></button>', $atts, $value);
-//     return $html;
-//   }
-// }
 
 // Remove <p> and <br/> from Contact Form 7
 add_filter('wpcf7_autop_or_not', '__return_false');
@@ -818,64 +756,6 @@ add_editor_style( 'style.css' );
 add_theme_support( 'editor-styles' );
 
 /*********************************
-		News CPT
-**********************************/
-// function NEWS() {
-//   register_post_type( 'news',
-//     array(
-//         'labels' => array(
-//             'name' => __( 'News'),
-//             'singular_name' => __( 'News')
-//         ),
-//         'public' => true,
-//             'menu_icon' => 'dashicons-admin-post',
-//             //'has_archive' => ture,
-//             'rewrite' => array('slug' => 'news'),
-//         )
-//     );
-// }
-// add_action( 'init', 'NEWS' );
-// function NEWS_a() {
-//   $labels = array(
-//     'name'                => _x( 'News', 'Post Type General Name', 'HAC' ),
-//     'singular_name'       => _x( 'News', 'Post Type Singular Name', 'HAC' ),
-//     'menu_name'           => __( 'News', 'HAC' ),
-//     'parent_item_colon'   => __( 'News', 'HAC' ),
-//     'all_items'           => __( 'All News', 'HAC' ),
-//     'view_item'           => __( 'View News', 'HAC' ),
-//     'add_new_item'        => __( 'Add New News', 'HAC' ),
-//     'add_new'             => __( 'Add New', 'HAC' ),
-//     'edit_item'           => __( 'Edit News', 'HAC' ),
-//     'update_item'         => __( 'Update News', 'HAC' ),
-//     'search_items'        => __( 'Search News', 'HAC' ),
-//     'not_found'           => __( 'Not Found', 'HAC' ),
-//     'not_found_in_trash'  => __( 'Not found in Trash', 'HAC' ),
-//   );
-//   $args = array(
-//     'label'               => __( 'News', 'HAC' ),
-//     'description'         => __( 'News', 'HAC' ),
-//     'labels'              => $labels,
-//     'supports'            => array( 'title', 'editor', 'thumbnail'),
-//     'taxonomies'          => array( 'genres' ),
-//     'hierarchical'        => true,
-//     'public'              => true,
-//     'show_ui'             => true,
-//     'show_in_menu'        => false,
-//     'show_in_nav_menus'   => false,
-//     'show_in_admin_bar'   => false,
-//     'menu_position'       => 1,
-//     'can_export'          => false,
-//     'has_archive'         => false,
-//     'exclude_from_search' => false,
-//     'publicly_queryable'  => false,
-//     'query_var'           => false,
-//     'capability_type'     => 'page',
-//   );
-//   register_post_type( 'NEWS', $args );
-// }
-// add_action( 'init', 'NEWS_a', 0 );
-
-/*********************************
 		Teams CPT
 **********************************/
 function TEAMMEMBERS() {
@@ -995,21 +875,12 @@ add_action( 'init', 'RESOURCES_a', 0 );
                 REMOVE ADMIN MENU
 **************************************************/
 function remove_menus(){
-  // remove_menu_page( 'index.php' );               //Dashboard
-  //remove_menu_page( 'edit.php' );
-  // remove_menu_page( 'upload.php' );              //Media
   remove_menu_page( 'edit-comments.php' );          //Comments
-  // remove_menu_page( 'plugins.php' );             //Plugins
-  // remove_menu_page( 'users.php' );               //Users
-  //remove_menu_page( 'tools.php' );                  //Tools
-  // remove_menu_page( 'options-general.php' );     //Settings
 }
 add_action( 'admin_menu', 'remove_menus' );
 
 
 get_template_part( 'includes/components/team-members/team-member-modal' );
-
-//get_template_part( 'includes/components/post-listing/post-listing-data' );
 
 include(ABSPATH . 'wp-content/themes/operatic/includes/components/post-listing/post-listing-data.php');
 

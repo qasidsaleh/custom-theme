@@ -61,7 +61,6 @@
                             <?php endwhile; ?>
                         </div>
                         <?php if($post_count > 1){ ?>
-                            <!-- <div class="swiper-pagination"></div> -->
                             <div class="swiper-button-prev"></div>
                             <div class="swiper-button-next"></div>
                         <?php } ?>
