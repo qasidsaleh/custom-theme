@@ -309,16 +309,6 @@ header{
                             }
                         }
                         &.open{
-                        	> a{
-                        		// &:after{
-                        		// 	position: absolute;
-                        		// 	content: '';
-                        		// 	bottom: -33px;
-                        		// 	width: 100px;
-                        		// 	height: 3px;
-                        		// 	background-color: $primary;
-                        		// }
-                        	}
                             .sub-menu{
                                 visibility: visible;
                                 opacity: 1;
@@ -449,12 +439,6 @@ header{
     }
     &.sticky{
         top: -78px;
-        // .topbar{
-        //     opacity: 0;
-        //     height: 0;
-        //     padding: 0;
-        //     z-index: -999;
-        // }
         .header-inner{
             .header-right{
                 top: 95px;

@@ -14,7 +14,6 @@
 			<div class="section-inner">
 				<div class="featured-image">
 					<?php if(empty($thumbnail)){
-						// display_image(get_field('dummy_image', 'options'));
 					} else {
 						echo $thumbnail;
 					} ?>

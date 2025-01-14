@@ -5,7 +5,6 @@
 		const init = () => {
 			startHeader();
 			startAccordion();
-			// startCarouselSwiper();
 			startJoinForm();
 		}
 		init();
@@ -89,14 +88,6 @@
 			}
 			});
 		});
-		// document.querySelector(".nav-overlay").addEventListener("click", () => {
-		// 	hamburgers.forEach((ham) => {
-		// 		ham.setAttribute("data-state", "closed");
-		// 		ham.setAttribute("aria-expanded", "false");
-		// 	});
-		// 	$(".main-nav").removeClass('open');
-		// 	$(".nav-overlay").removeClass('open');
-		// });
 
 		// submenu alignments
 		let menuItems = document.querySelectorAll('#main-menu .menu-item-has-children');
@@ -115,15 +106,6 @@
 		});
 	}
 
-	// function stickyHeader() {
-	// 	var header = document.getElementById("header");
-	// 	var scroll = $(window).scrollTop();
-	//   	if (scroll >= 100) {
-	//     	header.classList.add("sticky");
-	//   	} else {
-	//     	header.classList.remove("sticky");
-	//   	}
-	// }
 	let lastScrollTop = 0;
 	window.addEventListener("scroll", function() {
 		var header = document.getElementById("header");
@@ -203,9 +185,6 @@
 		const modalId = '#'+$(this).attr("data-id");
 		$("body").addClass("overlay");
 		$(modalId).addClass('active');
-		// var modal = modalId+" iframe";
-		// var iframe = document.querySelector("#m1 iframe");
-		// iframe.play();
 		return false;
 	});
 	$(".videocross").on("click touch", function(e){
@@ -357,14 +336,12 @@
 	window.addEventListener('scroll', scrollFunc, { passive: true });
 
 	function scrollFunc() {
-		//stickyHeader();
 		var statistics = document.querySelectorAll('.increment-stat');
 		if(statistics.length){
 			statistics.forEach(statistic => {
 				let stat = $(statistic);
 				let startValue = 0;
 				let endValue = stat.data('value');
-				//let endValue = parseInt(statistic.textContent.replace(/[^0-9]/g, ""));
 
 				var windowHeight = window.innerHeight;
 				var elementTop = statistic.getBoundingClientRect().top;

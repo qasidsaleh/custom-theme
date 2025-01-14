@@ -15,7 +15,6 @@ function get_ajax_member_data () {
     );;
   	$ajaxposts = new WP_Query( $member );
   	$response = '';
- 	// The Query
   	if ( $ajaxposts->have_posts() ) { 
     	while ( $ajaxposts->have_posts() ) {
   			$ajaxposts->the_post(); 
@@ -101,5 +100,5 @@ function get_ajax_member_data () {
 		<?php }
     }
   	echo $response;
-  	exit; // leave ajax call
+  	exit;
 }

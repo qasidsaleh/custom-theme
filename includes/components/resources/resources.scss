@@ -15,22 +15,6 @@
             margin-bottom: 10px;
         }
     }
-    // &:after{
-    //     position: absolute;
-    //     content: '';
-    //     bottom: -50px;
-    //     left: -5%;
-    //     right: -5%;
-    //     background-color: $white;
-    //     border-radius: 100%;
-    //     width: 110%;
-    //     height: 100px;
-    //     @media only screen and (max-width:$mobile_breakpoint){
-    //         width: 130%;
-    //         left: -15%;
-    //         right: -15%;
-    //     }
-    // }
     .section-inner{
         @media only screen and (max-width:$mobile_breakpoint){
             padding-right: 0px;
@@ -62,7 +46,6 @@
                         display: grid;
                         grid-template-columns: 1fr;
                         gap:50px;
-                        // width: 100% !important;
                         text-align: center;
                         &.col-2{
                             grid-template-columns: 1fr 250px;
